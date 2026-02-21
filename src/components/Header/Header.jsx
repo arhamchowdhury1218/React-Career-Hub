@@ -1,10 +1,22 @@
+import { NavLink } from "react-router-dom";
+
 const Header = () => {
-  const links = [
-    { name: "Home", path: "/" },
-    { name: "Statistics", path: "/statistics" },
-    { name: "Applied Jobs", path: "/applied-jobs" },
-    { name: "Blog", path: "/blog" },
-  ];
+  const links = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/statistics">Statistics</NavLink>
+      </li>
+      <li>
+        <NavLink to="/applied-jobs">Applied Jobs</NavLink>
+      </li>
+      <li>
+        <NavLink to="/blog">Blog</NavLink>
+      </li>
+    </>
+  );
   return (
     <div className="navbar bg-base-100 shadow-sm w-11/12 mx-auto">
       <div className="navbar-start">
@@ -30,26 +42,31 @@ const Header = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            {links.map((link) => (
+            {/* {links.map((link) => (
               <li key={link.name}>
                 <a href={link.path}>{link.name}</a>
               </li>
-            ))}
+            ))} */}
+
+            {links}
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">CareerHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          {links.map((link) => (
+          {/* {links.map((link) => (
             <li key={link.name}>
               <a href={link.path}>{link.name}</a>
             </li>
-          ))}
+          ))} */}
+          {links}
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Start Applying</a>
+        <button className="btn bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          Start Applying
+        </button>
       </div>
     </div>
   );
