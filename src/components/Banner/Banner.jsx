@@ -2,8 +2,8 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="hero ">
-      <div className="hero-content flex-col lg:flex-row-reverse">
+    <div className="">
+      <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-6 mt-10 mb-10">
         <img src="./assets/images/user.png" className="max-w-sm rounded-lg" />
         <div className="">
           <h1 className="text-5xl font-bold">
