@@ -1,4 +1,5 @@
 import React from "react";
+import FeaturedJob from "../FeaturedJob/FeaturedJob";
 
 const FeaturedJobs = () => {
   const [featuredJobs, setFeaturedJobs] = React.useState([]);
@@ -18,6 +19,9 @@ const FeaturedJobs = () => {
         <p className="text-xl mt-4">
           Discover and apply to the most popular job listings in your field.
         </p>
+        {featuredJobs.map((job) => {
+          return <FeaturedJob key={job.id} job={job}></FeaturedJob>;
+        })}
       </div>
     </div>
   );
