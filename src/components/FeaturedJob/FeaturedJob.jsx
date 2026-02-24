@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedJob = ({ job }) => {
   console.log("Rendering FeaturedJob:", job);
@@ -30,7 +30,9 @@ const FeaturedJob = ({ job }) => {
         </div>
       </div>
 
-      <button className="btn btn-primary">View Details</button>
+      <Link to={`/job/${job.id}`} className="btn btn-primary">
+        View Details
+      </Link>
     </div>
   );
 };
