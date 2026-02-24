@@ -5,7 +5,7 @@ import CategoryLists from "../CategoryLists/CategoryLists";
 
 const Home = () => {
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-9/12 mx-auto">
       <Banner />
       <CategoryLists></CategoryLists>
       <FeaturedJobs></FeaturedJobs>
